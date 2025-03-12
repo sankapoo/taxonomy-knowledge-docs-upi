@@ -43,6 +43,10 @@ seed_examples:
           Does the beneficiary need to register for UPI to receive funds?
         answer: |
           If using a Virtual ID, the beneficiary must be registered. For Account + IFSC or Aadhaar number, registration is not required.
+      - question: |
+          What are the available methods to transfer funds using UPI?
+        answer: |
+          Funds can be transferred using Virtual Payment Addresses (VPAs), bank account number + IFSC, or Aadhaar numbers.
   - context: |
       UPI supports multiple fund transfer channels, including VPAs, bank account + IFSC, and Aadhaar numbers. Failed transactions generally result in automatic reversals.
     questions_and_answers:
