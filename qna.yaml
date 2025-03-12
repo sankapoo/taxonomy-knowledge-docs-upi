@@ -111,7 +111,7 @@ document_outline: |
   UPI is a real-time payment system developed by NPCI, enabling instant and secure bank transactions. It supports multiple transfer channels, virtual payment addresses, and prepaid wallet interoperability.
 document:
   repo: https://github.com/sankapoo/taxonomy-knowledge-docs-upi.git
-  commit: 0fa9d3c7fcccbcedb4463db8349c0e0524276a2c
+  commit: 618cd96d434641a9b633ec49fcc89b78ce601997
   patterns:
     - upi.md
     - "banking/upi/*.md"
