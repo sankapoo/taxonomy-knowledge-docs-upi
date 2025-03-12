@@ -1,0 +1,113 @@
+version: 3
+domain: Banking/UPI
+created_by: sankapoo
+seed_examples:
+  - context: |
+      Unified Payments Interface (UPI) is an instant payment system developed by NPCI that enables secure money transfers 24/7. Built over IMPS, UPI supports direct bank account transactions using Virtual Payment Addresses (VPAs), mobile numbers, or bank details.
+    questions_and_answers:
+      - question: |
+          What is UPI?
+        answer: |
+          UPI (Unified Payments Interface) is an instant payment system developed by NPCI, allowing money transfers between bank accounts 24/7.
+      - question: |
+          How does UPI differ from IMPS?
+        answer: |
+          UPI extends IMPS by providing P2P pull functionality, merchant payments, a single app for money transfer, and single-click two-factor authentication.
+      - question: |
+          Does UPI work only during banking hours?
+        answer: |
+          No, UPI transactions are instant and available 24/7, regardless of banking hours.
+  - context: |
+      UPI transactions require a UPI-PIN, which is a 4-6 digit passcode set by the user. It is necessary for authorizing all transactions and should not be shared with anyone.
+    questions_and_answers:
+      - question: |
+          What is a UPI-PIN?
+        answer: |
+          A UPI-PIN (UPI Personal Identification Number) is a 4-6 digit passcode required to authorize transactions on UPI apps.
+      - question: |
+          What happens if I enter the wrong UPI-PIN during a transaction?
+        answer: |
+          The transaction will fail. Multiple incorrect attempts may lead to temporary blocking.
+      - question: |
+          How can I reset my UPI-PIN?
+        answer: |
+          You can reset your UPI-PIN using your debit card details (last six digits and expiry date) through your UPI app.
+  - context: |
+      UPI allows users to link multiple bank accounts to a single virtual address (VPA). Transactions can be performed using VPAs, account numbers + IFSC, or Aadhaar numbers.
+    questions_and_answers:
+      - question: |
+          Can I link multiple bank accounts to the same virtual address?
+        answer: |
+          Yes, multiple bank accounts can be linked to a single virtual address, depending on the PSP’s functionalities.
+      - question: |
+          Does the beneficiary need to register for UPI to receive funds?
+        answer: |
+          If using a Virtual ID, the beneficiary must be registered. For Account + IFSC or Aadhaar number, registration is not required.
+  - context: |
+      UPI supports multiple fund transfer channels, including VPAs, bank account + IFSC, and Aadhaar numbers. Failed transactions generally result in automatic reversals.
+    questions_and_answers:
+      - question: |
+          What are the different ways to transfer funds using UPI?
+        answer: |
+          Funds can be transferred using Virtual ID (VPA), account number + IFSC, or Aadhaar number.
+      - question: |
+          What happens if my account is debited, but the transaction fails?
+        answer: |
+          UPI provides real-time reversals for declined transactions. If reversal does not occur immediately, contact your bank.
+      - question: |
+          Can I stop a UPI payment once initiated?
+        answer: |
+          No, UPI payments cannot be stopped once initiated.
+  - context: |
+      Prepaid Payment Instruments (PPIs) such as wallets and prepaid cards can now be linked to UPI, enabling interoperability across merchants and online platforms.
+    questions_and_answers:
+      - question: |
+          What is PPI interoperability on UPI?
+        answer: |
+          PPI interoperability allows prepaid wallets to be linked to UPI, enabling transactions across all UPI merchants.
+      - question: |
+          How does PPI interoperability benefit customers?
+        answer: |
+          Customers can use any mobile wallet at all UPI merchant locations instead of being restricted to specific wallet providers.
+      - question: |
+          Are there charges for customers using PPI on UPI?
+        answer: |
+          No, there are no charges for customers using PPI wallets linked to UPI.
+  - context: |
+      Security is a key aspect of UPI. Transactions require a UPI-PIN, and losing a mobile phone does not compromise security unless the PIN is shared.
+    questions_and_answers:
+      - question: |
+          What should I do if I lose my phone?
+        answer: |
+          Block your mobile number immediately. Your UPI-PIN is required for transactions, ensuring security.
+      - question: |
+          Will UPI work if I change my mobile SIM or handset?
+        answer: |
+          A new registration is required if you change your SIM, mobile number, or device.
+      - question: |
+          Can someone else use my UPI if they have my phone?
+        answer: |
+          No, transactions require your UPI-PIN, ensuring unauthorized users cannot access UPI services.
+  - context: |
+      Merchants can accept UPI payments seamlessly using QR codes or online payment integration. Charges may apply based on merchant agreements.
+    questions_and_answers:
+      - question: |
+          How can merchants accept UPI payments?
+        answer: |
+          Merchants can accept UPI payments via QR codes or online UPI payment gateways.
+      - question: |
+          Are there charges for merchants accepting UPI payments?
+        answer: |
+          No charges for transactions from a bank account, but charges may apply for wallet-based payments.
+      - question: |
+          How do online merchants integrate UPI payments?
+        answer: |
+          Online merchants can integrate UPI through their acquiring bank or payment gateway providers.
+document_outline: |
+  UPI is a real-time payment system developed by NPCI, enabling instant and secure bank transactions. It supports multiple transfer channels, virtual payment addresses, and prepaid wallet interoperability.
+document:
+  repo: https://github.com/sankapoo/taxonomy-knowledge-docs-upi.git
+  commit: 0fa9d3c7fcccbcedb4463db8349c0e0524276a2c
+  patterns:
+    - upi.md
+    - "banking/upi/*.md"
